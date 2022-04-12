@@ -1,0 +1,18 @@
+﻿@model Data
+@{
+    ViewData["Title"] = "Reset Your Password";
+}
+<h1 style="font-size:35px; color:#333333">Reset Your Password</h1>
+
+<div >
+    <form method="post">
+        <b>Email</b><br />
+        @Html.EditorFor(p => p.Email, new { style = "width:300px" })  @Html.ValidationMessageFor(p => p.Email)<br>
+        <input type="submit" value="Send me a code" name="action" class="btn btn-primary mt-3 pr-3 pl-3">
+        <input type="submit" value="I have a code" name="action" class="btn btn-light mt-3 pr-3 pl-3" style="border-color:lightgrey">
+
+        <h2>@ViewBag.Code</h2>
+
+
+    </form>
+</div>
